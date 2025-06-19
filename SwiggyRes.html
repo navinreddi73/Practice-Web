@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var restaurtantsInfo = [
+            {
+                name: 'Chinese Wok',
+                itemsAvailable: {
+                    typesInRice: ['fried rice', 'noodles (Hakka, Chow Mein)', 'Manchurian (both vegetable and chicken)','spring rolls', 'chicken', 'vegetable stir-fries'],
+                    typesInDrinkes: {
+                        softDrinks: ['Coca-Cola', 'Pepsi, Sprite', 'Mountain Dew'],
+                        hardDrinks: ['coffee', 'tea', 'hot chocolate', 'masala chai', 'mulled wine', 'hot toddies', 'herbal teas', 'cappuccinos', 'lattes']
+                    }
+                },
+                itemSelected: 'Items at $129',
+                rating: 4.1,
+                timeToReach: 35,
+                about: 'Chinese, Asian, Tibetan, Desserts',
+                address: 'Uppal'
+            },
+            {
+                name: 'Burger King',
+                itemsAvailable: {
+                    typesInRice: ['fried rice', 'noodles (Hakka, Chow Mein)', 'Manchurian (both vegetable and chicken)','spring rolls', 'chicken', 'vegetable stir-fries'],
+                    typesInDrinkes: {
+                        softDrinks: ['Coca-Cola', 'Pepsi, Sprite', 'Mountain Dew'],
+                        hardDrinks: ['coffee', 'tea', 'hot chocolate', 'masala chai', 'mulled wine', 'hot toddies', 'herbal teas', 'cappuccinos', 'lattes']
+                    }
+                },
+                itemSelected: 'Burger - $129 off Above $199',
+                rating: 4.3,
+                timeToReach: 25,
+                about: 'Burgers, American',
+                address: 'DSL Virtue Mall, Uppal'
+            },
+            {
+                name: 'Pizza Hut',
+                itemsAvailable: {
+                    typesInRice: ['fried rice', 'noodles (Hakka, Chow Mein)', 'Manchurian (both vegetable and chicken)','spring rolls', 'chicken', 'vegetable stir-fries'],
+                    typesInDrinkes: {
+                        softDrinks: ['Coca-Cola', 'Pepsi, Sprite', 'Mountain Dew'],
+                        hardDrinks: ['coffee', 'tea', 'hot chocolate', 'masala chai', 'mulled wine', 'hot toddies', 'herbal teas', 'cappuccinos', 'lattes']
+                    }
+                },
+                itemSelected: 'Pizza - 50% off upto $100',
+                rating: 4.5,
+                timeToReach: 40,
+                about: 'Pizzas',
+                address: 'Uppal'
+            },
+            {
+                name: 'Domino`s Pizza',
+                itemsAvailable: {
+                    typesInRice: ['fried rice', 'noodles (Hakka, Chow Mein)', 'Manchurian (both vegetable and chicken)','spring rolls', 'chicken', 'vegetable stir-fries'],
+                    typesInDrinkes: {
+                        softDrinks: ['Coca-Cola', 'Pepsi, Sprite', 'Mountain Dew'],
+                        hardDrinks: ['coffee', 'tea', 'hot chocolate', 'masala chai', 'mulled wine', 'hot toddies', 'herbal teas', 'cappuccinos', 'lattes']
+                    }
+                },
+                itemSelected: 'Pizza - Item At $75',
+                rating: 4.3,
+                timeToReach: 25,
+                about: 'Pizzas, Italian, Pastas, Desserts',
+                address: 'Uppal'
+            },
+            {
+                name: 'Faasos - Wraps, Rolls & Shawarma',
+                itemsAvailable: {
+                    typesInRice: ['fried rice', 'noodles (Hakka, Chow Mein)', 'Manchurian (both vegetable and chicken)','spring rolls', 'chicken', 'vegetable stir-fries'],
+                    typesInDrinkes: {
+                        softDrinks: ['Coca-Cola', 'Pepsi, Sprite', 'Mountain Dew'],
+                        hardDrinks: ['coffee', 'tea', 'hot chocolate', 'masala chai', 'mulled wine', 'hot toddies', 'herbal teas', 'cappuccinos', 'lattes']
+                    }
+                },
+                itemSelected: 'Rolls - Any Item $200 for two',
+                rating: 4.0,
+                timeToReach: 20,
+                about: 'Kebabs, Fast Food, Snacks, American',
+                address: 'Boduppal'
+            },
+            {
+                name: 'The Good Bowl',
+                itemsAvailable: {
+                    typesInRice: ['fried rice', 'noodles (Hakka, Chow Mein)', 'Manchurian (both vegetable and chicken)','spring rolls', 'chicken', 'vegetable stir-fries'],
+                    typesInDrinkes: {
+                        softDrinks: ['Coca-Cola', 'Pepsi, Sprite', 'Mountain Dew'],
+                        hardDrinks: ['coffee', 'tea', 'hot chocolate', 'masala chai', 'mulled wine', 'hot toddies', 'herbal teas', 'cappuccinos', 'lattes']
+                    }
+                },
+                itemSelected: 'Biryani at $129',
+                rating: 4.2,
+                timeToReach: 25,
+                about: 'Biryani, North Indian, Pastas, Punjabi',
+                address: 'Boduppal'
+            },
+            {
+                name: 'EatFit',
+                itemsAvailable: {
+                    typesInRice: ['fried rice', 'noodles (Hakka, Chow Mein)', 'Manchurian (both vegetable and chicken)','spring rolls', 'chicken', 'vegetable stir-fries'],
+                    typesInDrinkes: {
+                        softDrinks: ['Coca-Cola', 'Pepsi, Sprite', 'Mountain Dew'],
+                        hardDrinks: ['coffee', 'tea', 'hot chocolate', 'masala chai', 'mulled wine', 'hot toddies', 'herbal teas', 'cappuccinos', 'lattes']
+                    }
+                },
+                itemSelected: 'Egg RiceItems at $99',
+                rating: 4.5,
+                timeToReach: 20,
+                about: 'Chinese, Healthy food',
+                address: 'Sri Venkateswara'
+            },
+            {
+                name: 'Leon`s - Burgers & Wings Leon',
+                itemsAvailable: {
+                    typesInRice: ['fried rice', 'noodles (Hakka, Chow Mein)', 'Manchurian (both vegetable and chicken)','spring rolls', 'chicken', 'vegetable stir-fries'],
+                    typesInDrinkes: {
+                        softDrinks: ['Coca-Cola', 'Pepsi, Sprite', 'Mountain Dew'],
+                        hardDrinks: ['coffee', 'tea', 'hot chocolate', 'masala chai', 'mulled wine', 'hot toddies', 'herbal teas', 'cappuccinos', 'lattes']
+                    }
+                },
+                itemSelected: 'Wings - 50% off upto $100',
+                rating: 4.4,
+                timeToReach: 40,
+                about: 'Turkish, Fast Food, Burgers',
+                address: 'Habsiguda'
+            },
+            {
+                name: 'McDonald`s',
+                itemsAvailable: {
+                    typesInRice: ['fried rice', 'noodles (Hakka, Chow Mein)', 'Manchurian (both vegetable and chicken)','spring rolls', 'chicken', 'vegetable stir-fries'],
+                    typesInDrinkes: {
+                        softDrinks: ['Coca-Cola', 'Pepsi, Sprite', 'Mountain Dew'],
+                        hardDrinks: ['coffee', 'tea', 'hot chocolate', 'masala chai', 'mulled wine', 'hot toddies', 'herbal teas', 'cappuccinos', 'lattes']
+                    }
+                },
+                itemSelected: 'Items at $179',
+                rating: 4.4,
+                timeToReach: 30,
+                about: 'Burgers, Beverages, Cafe, Desserts',
+                address: 'Uppal'
+            },
+            {
+                name: 'Big Bowl',
+                itemsAvailable: {
+                    typesInRice: ['fried rice', 'noodles (Hakka, Chow Mein)', 'Manchurian (both vegetable and chicken)','spring rolls', 'chicken', 'vegetable stir-fries'],
+                    typesInDrinkes: {
+                        softDrinks: ['Coca-Cola', 'Pepsi, Sprite', 'Mountain Dew'],
+                        hardDrinks: ['coffee', 'tea', 'hot chocolate', 'masala chai', 'mulled wine', 'hot toddies', 'herbal teas', 'cappuccinos', 'lattes']
+                    }
+                },
+                itemSelected: 'Items at $129',
+                rating: 4.1,
+                timeToReach: 20,
+                about: 'North Indian, Chinese, Tibetan',
+                address: 'Uppal'
+            }
+        ];
+        console.log("--------Restaurtants---------");
+        //console.log(restaurtantsInfo);
+        console.log("Restaurtant 1");
+        console.log("Restaurtant Name:", restaurtantsInfo[0].name, "- Address:", restaurtantsInfo[0].address, 
+                    "- Availalable memu:", restaurtantsInfo[0].itemsAvailable, "- Selected Item:", 
+                    restaurtantsInfo[0].itemSelected);
+        console.log("Restaurtant 2");
+        console.log("Restaurtant Name:", restaurtantsInfo[1].name, "- Address:", restaurtantsInfo[1].address, 
+                    "- Availalable memu:", restaurtantsInfo[1].itemsAvailable, "- Selected Item:", 
+                    restaurtantsInfo[0].itemSelected);
+        console.log("Restaurtant 3");
+        console.log("Restaurtant Name:", restaurtantsInfo[2].name, "- Address:", restaurtantsInfo[2].address, 
+                    "- Availalable memu:", restaurtantsInfo[2].itemsAvailable, "- Selected Item:", 
+                    restaurtantsInfo[0].itemSelected);
+        console.log("Restaurtant 4");
+        console.log("Restaurtant Name:", restaurtantsInfo[3].name, "- Address:", restaurtantsInfo[3].address, 
+                    "- Availalable memu:", restaurtantsInfo[3].itemsAvailable, "- Selected Item:", 
+                    restaurtantsInfo[0].itemSelected);
+        console.log("Restaurtant 5");
+        console.log("Restaurtant Name:", restaurtantsInfo[4].name, "- Address:", restaurtantsInfo[4].address, 
+                    "- Availalable memu:", restaurtantsInfo[4].itemsAvailable, "- Selected Item:", 
+                    restaurtantsInfo[0].itemSelected);
+        console.log("Restaurtant 6");
+        console.log("Restaurtant Name:", restaurtantsInfo[5].name, "- Address:", restaurtantsInfo[5].address, 
+                    "- Availalable memu:", restaurtantsInfo[5].itemsAvailable, "- Selected Item:", 
+                    restaurtantsInfo[0].itemSelected);
+        console.log("Restaurtant 7");
+        console.log("Restaurtant Name:", restaurtantsInfo[6].name, "- Address:", restaurtantsInfo[6].address, 
+                    "- Availalable memu:", restaurtantsInfo[6].itemsAvailable, "- Selected Item:", 
+                    restaurtantsInfo[0].itemSelected);
+        console.log("Restaurtant 8");
+        console.log("Restaurtant Name:", restaurtantsInfo[7].name, "- Address:", restaurtantsInfo[7].address, 
+                    "- Availalable memu:", restaurtantsInfo[7].itemsAvailable, "- Selected Item:", 
+                    restaurtantsInfo[0].itemSelected);
+        console.log("Restaurtant 9");
+        console.log("Restaurtant Name:", restaurtantsInfo[8].name, "- Address:", restaurtantsInfo[8].address, 
+                    "- Availalable memu:", restaurtantsInfo[8].itemsAvailable, "- Selected Item:", 
+                    restaurtantsInfo[0].itemSelected);
+        console.log("Restaurtant 10");
+        console.log("Restaurtant Name:", restaurtantsInfo[9].name, "- Address:", restaurtantsInfo[9].address, 
+                    "- Availalable memu:", restaurtantsInfo[9].itemsAvailable, "- Selected Item:", 
+                    restaurtantsInfo[0].itemSelected);
+
+        // SoftDriks
+        console.log(restaurtantsInfo[0].itemsAvailable.typesInDrinkes.softDrinks[0]);
+    </script>
+</body>
+
+</html>
