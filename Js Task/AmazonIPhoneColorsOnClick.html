@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .colors-iphone {
+            display: flex;
+            align-items: center;
+            column-gap: 1%;
+        }
+        .color-box {
+            text-align: center;
+            cursor: pointer;
+        }
+        .square {
+            width: 80px;
+            height: 80px;
+            border: 2px solid #b8b6b6;
+            border-radius: 8px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .inner-circle {
+            width: 90%;
+            height: 90%;
+            border-radius: 50%;
+        }
+        .price {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="apple-contain">
+        <h2>Apple iPhone 15 (256 GB) - Colours</h2>
+        <div class ="colors-iphone">
+            <div class ="color-box" onclick="showPrice('black')">
+                <div class ="square">
+                    <div class ="inner-circle" style="background-color: black;"></div></div>
+                    <div id="black-price" class="price"></div>
+            </div>
+            <div class="color-box" onclick="showPrice('yellow')">
+                <div class="square">
+                    <div class="inner-circle" style="background-color: yellow;"></div></div>
+                    <div id="yellow-price" class="price"></div>
+            </div>
+            <div class="color-box" onclick="showPrice('white')">
+                <div class="square">
+                    <div class="inner-circle" style="background-color: white; border:1px solid #ccc;"></div></div>
+                    <div id="white-price" class="price"></div>
+            </div>
+            <div class="color-box" onclick="showPrice('pink')">
+                <div class="square">
+                    <div class="inner-circle" style="background-color: pink;"></div></div>
+                    <div id="pink-price" class="price"></div>
+            </div>
+            <div class="color-box" onclick="showPrice('blue')">
+                <div class="square">
+                    <div class="inner-circle" style="background-color: blue;"></div></div>
+                    <div id="blue-price" class="price"></div>
+            </div>
+        </div>
+    </div>
+    
+
+    <script>
+        function showPrice(color){
+
+            document.getElementById('black-price').textContent = '';
+            document.getElementById('yellow-price').textContent = '';
+            document.getElementById('white-price').textContent = '';
+            document.getElementById('pink-price').textContent = '';
+            document.getElementById('blue-price').textContent = '';
+
+            var price = '';
+            if (color == 'black') {
+                price = '70,800.00';
+                document.getElementById('black-price').textContent = price;
+            } else if (color == 'yellow') {
+                price = '69,800.00';
+                document.getElementById('yellow-price').textContent = price;
+            } else if (color == 'white') {
+                price = '71,000.00';
+                document.getElementById('white-price').textContent = price;
+            } else if (color == 'pink') {
+                price = '69,000.00';
+                document.getElementById('pink-price').textContent = price;
+            } else if (color == 'blue') {
+                price = '71,800.00';
+                document.getElementById('blue-price').textContent = price;
+            }
+        }
+    </script>
+</body>
+</html>
