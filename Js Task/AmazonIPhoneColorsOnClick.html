@@ -70,28 +70,28 @@
     <script>
         function showPrice(color){
 
-            document.getElementById('black-price').textContent = '';
-            document.getElementById('yellow-price').textContent = '';
-            document.getElementById('white-price').textContent = '';
-            document.getElementById('pink-price').textContent = '';
-            document.getElementById('blue-price').textContent = '';
+            document.getElementById('black-price').innerHTML = '';
+            document.getElementById('yellow-price').innerHTML = '';
+            document.getElementById('white-price').innerHTML = '';
+            document.getElementById('pink-price').innerHTML = '';
+            document.getElementById('blue-price').innerHTML = '';
 
             var price = '';
             if (color == 'black') {
                 price = '70,800.00';
-                document.getElementById('black-price').textContent = price;
+                document.getElementById('black-price').innerHTML = price;
             } else if (color == 'yellow') {
                 price = '69,800.00';
-                document.getElementById('yellow-price').textContent = price;
+                document.getElementById('yellow-price').innerHTML = price;
             } else if (color == 'white') {
                 price = '71,000.00';
-                document.getElementById('white-price').textContent = price;
+                document.getElementById('white-price').innerHTML = price;
             } else if (color == 'pink') {
                 price = '69,000.00';
-                document.getElementById('pink-price').textContent = price;
+                document.getElementById('pink-price').innerHTML = price;
             } else if (color == 'blue') {
                 price = '71,800.00';
-                document.getElementById('blue-price').textContent = price;
+                document.getElementById('blue-price').innerHTML = price;
             }
         }
     </script>
